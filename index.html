@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Promocion 2025</title>
+</head>
+<body>
+    <div class="holographic-container">
+    <div class="holographic-card">
+        <img src="/src/MAILING.jpg" class="promo">
+    </div>
+  </div>
+
+    <!-- Overlay para ver imagen completa -->
+  <div class="overlay" id="overlay">
+    <span class="close-btn" id="closeBtn">&times;</span>
+    <img src="/src/MAILING.jpg" alt="Promoción completa">
+  </div>
+
+  <script>
+    const promoImg = document.getElementById("promoImg");
+    const overlay = document.getElementById("overlay");
+    const closeBtn = document.getElementById("closeBtn");
+
+    // abrir al hacer click en la imagen
+    promoImg.addEventListener("click", () => {
+      overlay.style.display = "flex";
+    });
+
+    // cerrar al hacer click en el botón
+    closeBtn.addEventListener("click", () => {
+      overlay.style.display = "none";
+    });
+
+    // cerrar al hacer click fuera de la imagen
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) {
+        overlay.style.display = "none";
+      }
+    });
+  </script>
+</body>
+
+
+
+</html>
